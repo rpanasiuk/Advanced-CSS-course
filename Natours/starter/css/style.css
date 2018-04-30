@@ -34,4 +34,42 @@ body {
 	background-size: cover;
 	background-position: top;
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}		
+	position: relative;
+}
+
+.page-logo {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+}
+
+.page-logo .logo {
+	height: 35px;
+}
+
+.page-title {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.page-title-text {
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+}
+
+.page-title-text-main {
+	display: block;
+	font-size: 60px;
+	font-weight: 400;
+	letter-spacing: 35px;
+}
+
+.page-title-text-sub {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 17.4px;
+}
