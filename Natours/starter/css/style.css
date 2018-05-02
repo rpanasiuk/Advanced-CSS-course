@@ -116,6 +116,7 @@ body {
 	padding: 15px 30px;
 	border-radius: 40px;
 	transition: all .4s;
+	position: relative;
 }
 
 .btn:visited {
@@ -135,4 +136,43 @@ body {
 .btn-white {
 	background: #fff;
 	color: #8F8F6BFF;
+}
+
+.btn::after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border-radius: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: all .4s;
+}
+
+.btn:hover::after {
+	transform: scaleX(1.2) scaleY(1.1);
+	opacity: 0;
+}
+
+.btn-white::after {
+	background: #fff;
+}
+
+.btn-animation {
+	animation: moveInBottom .5s ease-out 1s;
+	animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
