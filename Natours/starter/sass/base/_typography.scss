@@ -35,13 +35,9 @@ body {
 	font-size: 3.5rem;
 	text-transform: uppercase;
 	font-weight: 700;
-	background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-	display: inline-block;
 	letter-spacing: .2rem;
+	display: inline-block;
 	transition: all .2s;
-
-	-webkit-background-clip: text;
-	color: transparent;
 
 	&:hover {
 		transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -54,10 +50,17 @@ body {
 	font-weight: 700;
 	text-transform: uppercase;
 }
+
 .paragraph {
 	font-size: 1.6rem;
 
 	&:not(:last-child) {
 		margin-bottom: 3rem;
 	}
+}
+
+.gradient-background {
+	background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+	-webkit-background-clip: text;
+	color: transparent;
 }
